@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Digital Clock | RashedDevX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="background-blobs">
+        <div class="blob"></div>
+        <div class="blob"></div>
+    </div>
+
+    <div class="clock-container">
+        <div class="theme-switch">
+            <label class="switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider round"></span>
+            </label>
+        </div>
+
+        <div class="time-wrapper">
+            <h1 id="time">00:00:00</h1>
+            <span id="ampm">AM</span>
+        </div>
+
+        <div class="date-wrapper">
+            <p id="date-text">Loading date...</p>
+        </div>
+
+        <hr>
+
+        <div class="alarm-section">
+            <h3>Alarm System</h3>
+            <div class="alarm-inputs">
+                <input type="time" id="alarm-time">
+                <button id="set-alarm-btn">Set Alarm</button>
+            </div>
+            <p id="alarm-status">No alarm set</p>
+            
+            <div class="alarm-controls">
+                <button id="stop-alarm-btn" class="hidden btn-danger">Stop</button>
+                <button id="snooze-btn" class="hidden btn-warning">Snooze (10m)</button>
+            </div>
+        </div>
+    </div>
+
+    <audio id="alarm-sound" loop>
+        <source src="https://assets.mixkit.co/active_storage/sfx/2869/2869-preview.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
